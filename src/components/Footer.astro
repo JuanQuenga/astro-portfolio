@@ -3,8 +3,24 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer>
-	&copy; {currentYear} Jeanine White
-	<small class="byline">🚀 Built by Astro</small>
+	&copy; {currentYear} Juan Quenga
+	<small class="byline">🚀 Built with Astro</small>
+	<script src="../blobity.min.js"></script>
+	<script type="module" hoist>
+		window.onload = () => {
+			console.log('BLOBITY');
+			new Blobity({
+				licenseKey: "peterfritz",
+				dotColor: "#D2042D",
+				fontColor: "#ffffff",
+				color: "#D2042D",
+				opacity: 0.5,
+				magnetic: false,
+				radius: 4,
+				zIndex: 9999
+			});
+		};
+		</script>
 </footer>
 <style>
 	footer {
